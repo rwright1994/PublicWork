@@ -10,6 +10,12 @@ Hello, my name is Robert and this repository is for displaying any coding sample
 
   Within <strong>Udemy Course Work</strong> there will be files that contain any sample projects that were constructed during any udemy courses for either practice or to gain valuable experience working with different frameworks and script files.
 
+Courses Taken:<br>
+  -<strong>Build Responsive Real Work Websites with HTML5 and CSS3</strong>, provided by <strong>Jonas Schmedtmann</strong>.<br>
+          Omnifood <br>
+  -<strong>The Complete JavaScript Course 2020: Build Real Project!</strong>,provided by <strong>Jonas Schmedtmann</strong>.<br>
+          Forkify <br>
+          
 <h3><strong>Sample Projects</strong></h3>
 
 <strong>Sample Project</strong> contains any projects that I am currently working on to provide for a portfolio.
