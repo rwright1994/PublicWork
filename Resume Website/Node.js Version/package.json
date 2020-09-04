@@ -1,0 +1,11 @@
+{
+  "name": "node.js-version",
+  "version": "1.0.0",
+  "description": "This is a node.js version of my resume website.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robert S Wright",
+  "license": "ISC"
+}
