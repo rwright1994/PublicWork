@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="vendors/css/ionicons.min.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <title>Robert Wright - Template 1</title>
 </head>
@@ -10,22 +12,113 @@
     
     <!-- Header & Navbar -->
     <header>
-        <nav>
-            <div class="row">
+        <div class="row">
+            <nav>
                <img class="profile-picture" src="imgs/Portrait_Placeholder.png">
                 <ul class="navbar">
                     <li><a href="">link-1</a></li>
-                    <li><a>link-2</a></li>
-                    <li><a>link-3</a></li>
-                    <li><a>link-4</a></li>
+                    <li><a href="">link-2</a></li>
+                    <li class="dropdown"><a  href="#">Programs<i class="ion-arrow-down-b"></i></a>
+                        <div class="dropdown-container">
+                            <ul class="dropdown-navi">
+                                <li><a href="templates.html">Templates</a></li>
+                                <li><a>Mine sweeper</a></li>
+                                <li><a>Battleship</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">link-4</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <section>
-        <h1>This is the second section </h1>
+    <section class="section-intro">
+        <div class="row">
+            <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
+        </div>
+        <div class="row">
+            <p>Looking to build responsive websites.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-50">
+                
+                <img style="border: 2px solid black; width:100%; height:500px;" src="imgs/Portrait_Placeholder.png">
+            </div>
+            <div class="col-50">
+                <h1> Heading placeholder text</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero provident eveniet optio sequi debitis commodi, odio accusantium ipsam reprehenderit eaque. Nulla, modi distinctio? Accusantium veritatis consequuntur obcaecati ipsum excepturi a maxime deserunt delectus labore natus at magni vel, reiciendis, facilis, molestiae dicta vero nam ipsa sapiente? Quas qui similique eum possimus officia? Ex molestias reprehenderit earum labore ut, illum culpa minus dolorum excepturi quasi odit, dolorem hic necessitatibus. Ex labore earum sunt facilis, doloribus maiores dolore ipsam, odio ullam, quia eos natus veniam. Nihil quo earum voluptate magnam rerum deleniti expedita veritatis dolorem quas ratione temporibus, tenetur laborum, animi maxime!</p>
+            </div>
+        </div>
     </section>
 
+
+    <!-- Middle banner stripe section -->
+    <section class="banner-stripe">
+        <div class="row">
+            <h1>This heading here is used to draw the attention to the viewer and link to anything that is important with the below buttons. </h1>
+       
+        </div>
+        <div class="row">
+            <div class="col-50">
+
+                <h3>Important Item 1</h3>
+                <p>Breif description about what the item is looking to do.</p>
+                <a class="btn btn-stripe" href="#"> Important Item 1</a>
+               
+            </div>
+            <div class="col-50">
+                <h3>Important Item 2</h3>
+                <p>Breif description about what the item is looking to do. This can even be on multiple lines. Plenty of space and formatting</p>
+                <a class="btn btn-stripe" href="#"> Important Item 2</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-call-to-action">
+        <div class="row">
+            <h1>Call to action heading - Link to contact info</h1>
+        </div>
+        <div class="row">
+            <div class="col-50">
+                <h2>Heading to request a call to action!</h2>
+                <p>No matter what your vision my be, I can help make the website the showcases your brand the best.</p>
+                <a href="#" class="btn">Contact me</a>
+            </div>
+            <div class="col-50">
+                <img style="border: 2px solid black; width:100%; height:500px;" src="imgs/Portrait_Placeholder.png">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div>
+                <ul class="footer-navi">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Resume</a></li>
+                    <li><a href="#">Programs</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="social-container">
+                <ul class="social-links">
+                    <li><a href="#"><i class="ion-social-linkedin"></i></a></li>
+                    <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                    <li><a href="#"><i class="ion-social-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row copy-right">
+            <p>
+                Copyright &copy; 2020 by Robert Wright. All rights reserved.
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
