@@ -1,0 +1,70 @@
+.col-centered{
+    float:none;
+    margin: 0 auto;
+}
+
+.navbar {
+    margin-bottom:0;
+}
+
+.jumbotron{
+    background-image: linear-gradient(rgba(255,255,255,0.55), rgba(255,255,255,0.55)),url("https://images.freeimages.com/images/large-previews/2c4/canvas-2-1186627.jpg");
+    background-attachment: fixed;
+    background-size: 100% auto;
+    min-height: 70vh;
+}
+
+.jumbotron .container{
+    text-align: center;
+    font-weight: bold;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail img{
+    margin:0;
+    height:260px;
+    width:100%;
+}
+
+.banner{
+    background-color: rgba(243, 243, 243, 0.55);
+    text-align:center;
+}
+
+.phone-app{
+    width:100%;
+    padding:10%;
+}
+
+.app-heading{
+    text-align:center;
+}
+
+.features-box{
+  
+    margin-bottom:50px;
+    font-size:20px;
+}
+
+.feature-item div{
+    display: inline-block;
+    float: left;
+    height: 55px;
+    width: 55px;
+    border: 2px solid orange;
+    border-radius: 50%;
+    color: orange;
+    padding: 5px;
+    margin-right: 25px;
+    font-size: 150%;
+    text-align: center;
+}
+
+.btn-download-app{
+    width:auto;
+    height: 50px;
+}
+

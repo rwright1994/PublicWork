@@ -3,41 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="vendors/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar Brand</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggle-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a href="#" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item active">
-                    <a href="#" class="nav-link">Features</a>
-                </li>
-                <li class="nav-item active">
-                    <a href="#" class="nav-link">Pricing</a>
-                </li>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brand</a>
+          </div>
+      
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+              <li><a href="#">Link</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
             </ul>
-            <span class="navbar-text">Navbar text with an inlline element</span>
+            <form class="navbar-form navbar-left">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Link</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
         </div>
-    </nav>
+      </nav>
+      <div class="jumbotron">
+        <div class="container">
+            <h2>This is where you put the most important service you offer</h2>
+            <button class="btn btn-lg btn-info">Action Link</button>
+            <h3>Another small catch phases!</h3>
+        </div>
+    </div>
 
+        <!-- Main content -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1546743991-422abed7a695?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                            <h1>Hello Col 1</h1>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1546656651-e564d05a4740?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                            <h1>Hello Col 1</h1>
+                        </div>
+                    </div>
+                    <div class="col-xs-3 ">
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1546507257-0bddab98fe3c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                            <h1>Hello Col 1</h1>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1547296853-e2ead7f545ea?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                            <h1>Hello Col 1</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="container-fluid banner">
+                <div class="row">
+                    <h1> This is a banner made using Bootstrap3.</h1>
+                </div>
+                <div class="row ">
+                    <div class="col-md-4 col-md-offset-2">
+                        <h1> This is a banner made using Bootstrap3.</h1>
+                        <h3>    Breif text about something important</h3>
+                        <button class="btn btn-small btn-success">Call to Action Btn</button>
+                    </div>
+                    <div class="col-md-4">
+                        <h1> This is a banner made using Bootstrap3.</h1>
+                        <h3>    Breif text about something important</h3>
+                        <button class="btn btn-small btn-success">Call to Action Btn</button>
+                    </div>
+                </div>
+            </div>
 
-
-
-
-
-
-
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-2">
+                       <img class="phone-app"src="https://images.unsplash.com/photo-1505156868547-9b49f4df4e04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="app-heading">Brief blub on what app does!</h2>
+                        <h3 class="features-heading"> Easy as 1&#x2026;2&#x2026;3, with these quick features! </h3>
+                            <div class="features-box">
+                                <div class="feature-item">
+                                    <div>1</div>
+                                    <p>Breif description of the First Feature! Keep it short!</p>
+                                </div>
+                            </div>
+                            <div class="features-box">
+                                 <div class="feature-item">
+                                    <div>1</div>
+                                    <p>Breif description of the Second Feature! Make it a good one, it matters!</p>
+                                 </div>
+                            </div>
+                            <div class="features-box">
+                                <div class="feature-item">
+                                   <div>1</div>
+                                   <p>Breif description of the Third Feature! Be sure to leave an impression. You want them to download it!</p>
+                                </div>
+                           </div>
+                           <div class="row">
+                                <div class="col-md-offset-4">
+                                    <img class="btn-download-app" src="vendors/img/download-app-android.png">
+                                    <img class="btn-download-app" src="vendors/img/download-app.svg">
+                                </div>
+                                <p>Display purposes only, no actual app t o download.*</p>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
     <script src="vendors/js/jquery-3.5.1.min.js"></script>
-    <script src="vendors/js/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
 </body>
 </html>
