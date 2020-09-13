@@ -28,6 +28,17 @@
      margin:4% auto 4% auto;
  }
 
+ header{
+     min-height: 75px;
+ }
+
+ .profile-picture{
+     width: 50px;
+     height: 50px;
+     margin: 24px 62.5px;
+ }
+
+
  .navbar{
     display:none;
  }

@@ -10,7 +10,7 @@
 
 html,
 body{
-    background-color: white;
+    background-color:  rgb(240, 240, 240);
     font-family: 'Roboto', sans-serif;
     color:black;
     font-weight: 300;
@@ -80,33 +80,39 @@ img{
 /*      HEADER & NAVIGATION STYLINGS              */
 /*------------------------------------------------*/
 
+
+
 header{
     color:white;
-    background-color:black;
+    background-color:rgba(0, 0, 0, 0.91); 
     width:100%;
-    height:155px;
-    min-height: 155px;
+    /* height:155px; */
+    /* min-height: 155px; */
 }
 
 .profile-picture{
+    display:block;
     float:left;
     padding:0;
     border: 3px solid white;
     width:100px;
     height:100px;
     border-radius: 50%;
-    margin: 24px 36px;
-    transition: border 0.5s;
+    margin: 24px 67.5px;
+    transition: border 0.4s;
 }
 
 .profile-picture:hover{
     border: 3px solid  rgb(219, 229, 25);  
 }
 
+
+
 /*--------- Navbar ------------*/
 .navbar{
     display:inline-block;
     float: right;
+    color:grey;
     font-weight: 400;
 }
 
@@ -114,6 +120,7 @@ header{
 .navbar li a:visited{
     color:white;
     text-decoration: none;
+    transition: color .4s;
 }
 
 .navbar ul{
@@ -127,10 +134,17 @@ header{
     transition: color 0.5s;
 }
 
+.navbar li:last-child{
+    margin-right:48px;
+}
+
 .navbar li a:hover,
 .navbar li a:active{
     color:rgb(219, 229, 25);  
 }
+
+
+
 
 .fixed-mob-nav{
     display:none;
@@ -142,8 +156,10 @@ header{
     height:100%;
 }
 
+
 .fixed-mob-nav ul li{
-    display:block;
+    display:inline-block;
+    width:100%;
     border-bottom: 2px solid white;
     text-align:center;
     padding: 12px;
@@ -172,6 +188,18 @@ header{
     color:rgb(219, 229, 25);
 }
 
+.sticky-nav{
+    display: block;
+    position:fixed;
+    z-index: 999;
+}
+
+.sticky-nav .profile-picture{
+    width:50px;
+    height:50px;    
+}
+
+
 .dropdown-container {
     position:absolute;
     display:none;
@@ -197,6 +225,7 @@ header{
 .dropdown-navi li a:visited{
     cursor:pointer;
     color:black;
+    margin: 12px;
     border:none;
 }
 
@@ -228,6 +257,7 @@ header{
 /*               INTRODUCTION SECTION             */
 /*------------------------------------------------*/
 
+
 .section-intro p{
     font-weight: 300;
     word-spacing: 4px;
@@ -246,6 +276,10 @@ header{
     flex-direction: column;
     flex:1;
     border: 1px solid white;
+}
+
+.banner-stripe{
+    transition: opactiy .7s;
 }
 
 .banner-stripe h1{
@@ -401,4 +435,10 @@ footer{
 .social-links .ion-social-github:hover,
 .social-links .ion-social-github:active{
     color: white;
+}
+
+/* Animation CSS */
+
+.fade-in{
+    opacity: 0;
 }
