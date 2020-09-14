@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link href="vendors/css/ionicons.min.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> 
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
@@ -41,12 +41,7 @@
                 </ul>
               </li>
             </ul>
-            <form class="navbar-form navbar-left">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search">
-              </div>
-              <button type="submit" class="btn btn-default">Submit</button>
-            </form>
+         
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#">Link</a></li>
               <li class="dropdown">
@@ -75,34 +70,48 @@
         <!-- Main content -->
         <section>
             <div class="container">
-                <div class="row">
+                <div class="row display-flex">
                     <div class="col-xs-3">
                         <div class="thumbnail">
                             <img src="https://images.unsplash.com/photo-1546743991-422abed7a695?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
-                            <h1>Hello Col 1</h1>
+                            <div class="caption">
+                                <h2>Thumbnail 1</h2>
+                                <p>Put some breif description in here to drawn the users attention!</p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xs-3">
                         <div class="thumbnail">
                             <img src="https://images.unsplash.com/photo-1546656651-e564d05a4740?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
-                            <h1>Hello Col 1</h1>
+                            <div class="caption">
+                                <h2>Thumbnail 2</h2>
+                                <p>Put some breif description in here to drawn the users attention!</p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xs-3 ">
                         <div class="thumbnail">
                             <img src="https://images.unsplash.com/photo-1546507257-0bddab98fe3c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
-                            <h1>Hello Col 1</h1>
+                            <div class="caption">
+                                <h2>Thumbnail 3</h2>
+                                <p>Put some breif description in here to drawn the users attention!</p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xs-3">
                         <div class="thumbnail">
                             <img src="https://images.unsplash.com/photo-1547296853-e2ead7f545ea?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
-                            <h1>Hello Col 1</h1>
+                            <div class="caption">
+                                <h2>Thumbnail 4</h2>
+                                <p>Put some breif description in here to drawn the users attention!</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
+        <section>
             <div class="container-fluid banner">
                 <div class="row">
                     <h1> This is a banner made using Bootstrap3.</h1>
@@ -120,6 +129,7 @@
                     </div>
                 </div>
             </div>
+        </section>
 
             <div class="container">
                 <div class="row">
@@ -152,13 +162,65 @@
                                     <img class="btn-download-app" src="vendors/img/download-app-android.png">
                                     <img class="btn-download-app" src="vendors/img/download-app.svg">
                                 </div>
-                                <p>Display purposes only, no actual app t o download.*</p>
+                                <p>Display purposes only, no actual app to download.*</p>
                            </div>
                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="signup">
+            <div class="container">
+                <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> Newsletter checkbox
+                      </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+            </div>
+        </section>
+
+        <footer>
+            <div class="">
+
+                <div class="row">
+                    <div class="centered">
+                        <ul>
+                            <li><a>Link 1</a></li>
+                            <li><a>Link 1</a></li>
+                            <li><a>Link 1</a></li>
+                            <li><a>Link 1</a></li>
+                            <li><a>Link 1</a></li>
+                        </ul>
+                    </div>
+               </div>
+               <div class="row centered">
+
+                <div class="social-container">
+                    <ul class="social-links">
+                        <li><a href="#"><i class="ion-social-linkedin"></i></a></li>
+                        <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                        <li><a href="#"><i class="ion-social-github"></i></a></li>
+                    </ul>
+                </div>
+                <p class="copyright"> Copyright © 2020 by Robert Wright. All rights reserved.</p>
+               </div>
+            </div>
+
+
+            
+        </footer>
  
     <script src="vendors/js/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>

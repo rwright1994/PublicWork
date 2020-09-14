@@ -1,7 +1,57 @@
+/*------------------------------------------------*/
+/*                  BASIC SETUP                   */
+/*------------------------------------------------*/
+
+
+html,
+body {
+    background-color: white;
+    color:black;
+    font-family: 'Lato', 'Arial', 'sans-serif';
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    
+}
+
+section{
+    padding: 40px 0;
+}
+
+form{
+    max-width: 50%;
+    margin:0 auto;
+}
+
+/*------------------------------------------------*/
+/*               GLOBAL COMPONENTS                */
+/*------------------------------------------------*/
+
+/* added to thumbnails to make them uniform regardless of content */
+.row.display-flex{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.centered{
+    text-align: center;
+  
+}
+
 .col-centered{
     float:none;
     margin: 0 auto;
 }
+
+.col-md-4{
+    padding: 36px 0;
+}
+
+/*------------------------------------------------*/
+/*           BOOTSTRAP MODIFICATIONS              */
+/*------------------------------------------------*/
+
 
 .navbar {
     margin-bottom:0;
@@ -19,7 +69,8 @@
     font-weight: bold;
 }
 
-.thumbnail {
+.thumbnail{
+    height: 100%;
     padding: 0;
 }
 
@@ -29,8 +80,19 @@
     width:100%;
 }
 
+
+.caption h2 {
+    padding: 0;
+    text-align: center;
+}
+
+/*------------------------------------------------*/
+/*           BOOTSTRAP MODIFICATIONS              */
+/*------------------------------------------------*/
+
 .banner{
     background-color: rgba(243, 243, 243, 0.55);
+    letter-spacing: 2px;
     text-align:center;
 }
 
@@ -43,8 +105,11 @@
     text-align:center;
 }
 
+.features-heading{
+    margin-bottom: 20px;
+}
+
 .features-box{
-  
     margin-bottom:50px;
     font-size:20px;
 }
@@ -68,3 +133,74 @@
     height: 50px;
 }
 
+.signup{
+    background-color: rgba(243, 243, 243, 0.55);
+}
+
+
+/*------------------------------------------------*/
+/*           FOTTER STYLING                       */
+/*------------------------------------------------*/
+
+
+
+footer{
+    color:white;
+    background-color:rgba(41, 41, 41, 1);
+}
+
+
+footer ul{
+    padding-top: 24px;
+}
+
+footer ul li{
+    display:inline;
+    font-size:24px;
+    padding: 0 24px;
+    text-decoration: none;
+
+}
+
+footer li a{
+    color:white;
+}
+
+.signup{
+    padding-bottom: 80px;
+}
+
+.copyright{
+    padding: 36px 0;
+}
+
+.social-container{
+    margin: 16px 0;
+}
+
+.social-container li a:link,
+.social-container li a:visited{
+    color:inherit;
+}
+
+.social-links .ion-social-linkedin,
+.social-links .ion-social-facebook,
+.social-links .ion-social-github{
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.social-links .ion-social-linkedin:hover,
+.social-links .ion-social-linkedin:active{
+    color: #0077B5
+}
+
+.social-links .ion-social-facebook:hover,
+.social-links .ion-social-facebook:active{
+    color: #3b5999
+}
+
+.social-links .ion-social-github:hover,
+.social-links .ion-social-github:active{
+    color: rgba(255, 255, 255, 0.8);
+}
