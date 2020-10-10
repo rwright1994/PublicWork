@@ -1,0 +1,44 @@
+<%- include("partials/header") %>
+<div class="content">
+    <div class="profile-panel-container">
+        <div class="profile-options-bar">
+            <ul>
+                <li><a href="/profile/<%=foundUser.id%>">Overview</a><i class="ion-ios-person-outline option-icon"></i></li>
+                <li class="option-selected"><a href="/profile/<%=foundUser.id%>/edit/personal_info">Personal Info</a><i class="ion-clipboard option-icon"></i></li>
+                <li><a href="/profile/<%=foundUser.id%>/edit/profile_picture">Profile Picutre</a><i class="ion-image option-icon"></i></li>
+                <li><a href="/profile/<%=foundUser.id%>/edit/hobbies">Hobbies</a><i class="ion-ios-game-controller-a-outline option-icon"></i></li>
+            </ul>
+        </div>
+
+        <div class="profile-panel">
+            <h1>Looking to make changes are we?</h1>
+            <form action="/profile/<%=foundUser.id%>?_method=PUT" method="POST" id="edit-profile-form" autocomplete="off">
+                <div class="field-container">
+                    <label>Username:</label>
+                    <input type="text" value="<%=foundUser.username%>" name="userInfo[username]">
+                </div>
+                <div class="field-container">
+                    <label>First Name:</label>
+                    <input type="text" placeholder="First Name" name="userInfo[firstName]">
+                </div>
+                <div class="field-container">
+                    <label>Last Name:</label>
+                    <input type="text" placeholder="Last Name" name="userInfo[lastName]">
+                </div>
+                <div class="field-container">
+                    <label>E-mail:</label>
+                    <input type="text" placeholder="example@address.com" name="userInfo[eMail]">
+                </div>
+                <div>
+                    <button class="btn-submit">Submit</button>
+                </div>
+            </form>
+
+            <div class="disclaimer push-bottom">
+                <h2>Please do not use any personal or sensitive information and this site is for demonstration purposes only. It is strongly recommended that you use plfaceholder information to save to the site. Thanks!</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include("partials/footer") %>

@@ -3,40 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="/stylesheets/vendors/css/ionicons.min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main/styles.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main/queries.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300&display=swap" rel="stylesheet">
+   
+    <title>Home Page Template </title>
 </head>
 <body>
-    <header>
+    
+    <div>
+    <!-- Header & Navbar -->
+    <header class="js--scroll-event">
         <div class="row">
             <nav>
-               <img id="mainProfilePicture" class="profile-picture" src="imgs/Portrait_Placeholder.png">
+               <img id="mainProfilePicture" class="profile-picture" src="/imgs/Photo.jpg">
+               <% if(!currentUser){ %>
+                <p id="login"><a href="/login">Login</a></p>
+                <p id="sign-up"><a href="/register">Sign-up</a></p>
+               
+               <%} else { %>
+                    <p id="username"><a href="/profile/<%=currentUser._id%>"><%= currentUser.username %> </a></p>
+                    <p id="logout"><a href="/logout">Logout</a></p>
+               <% } %>
                 <ul class="navbar">
-                    <li><a href="">link-1</a></li>
-                    <li><a href="">link-2</a></li>
-                    <li class="dropdown"><a  href="#">Drop Down<i class="ion-arrow-down-b"></i></a>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/resume">Resume</a></li>
+                    <li class="dropdown"><a  href="#">Templates<i class="ion-arrow-down-b"></i></a>
                         <div class="dropdown-container">
                             <ul class="dropdown-navi">
-                                <li><a href="templates.html">Drop Item 1</a></li>
-                                <li><a>Drop Item 2</a></li>
-                                <li><a>Drop Item 3</a></li>
+                                <li><a href="templates.html">Template-1</a></li>
+                                <li><a>Template-2</a></li>
+                                <li><a>Template-3</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li><a href="">link-4</a></li>
+                    <li><a href="">Contact</a></li>
                 </ul>
                 <a class="mobile-navi  js--mobile-navi-icon"><i class="ion-navicon-round"></i></a>
             </div>
+        </div>
 
             <div class="fixed-mob-nav js--navbar">
-                <nav>
+               
                     <ul>
-                        </li><img class="profile-picture profile-picture-mob" src="imgs/Portrait_Placeholder.png">
+                        </li><img class="profile-picture profile-picture-mob" src="/imgs/Photo.jpg">
                         <li><a>Mob Link 1</a></li>
                         <li><a>Mob Link 2</a></li>
                         <li><a>Mob Link 3</a></li>
                         <li><a>Mob Link 4</a></li>
                     </ul>
-                </nav>
+                
             </div>
         </nav>
     </header>

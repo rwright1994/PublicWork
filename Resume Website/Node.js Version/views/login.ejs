@@ -1,0 +1,25 @@
+<%- include("partials/header") %>
+
+
+<div class="content">
+    <div class="form-container">
+        <h2>Login</h2>
+        <form action="/login" method="POST" class="form-login" autocomplete="off">
+            <div class="field-container">
+                <label> Username:</label>
+                <input type="text" placeholder="Username" name="username">
+            </div>
+            <div class="field-container">
+                <label> Password: </label>
+                <input type="password" placeholder="Password" name="password">
+            </div>
+            <div>
+                <button class="btn-submit">Login!</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<%- include("partials/footer") %>
