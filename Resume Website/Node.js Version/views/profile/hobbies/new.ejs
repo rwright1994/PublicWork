@@ -1,0 +1,40 @@
+<%- include("../../partials/header") %>
+
+<div class="profile-panel-container">
+    <div class="profile-options-bar">
+        <ul>
+            <li><a href="/profile/<%=currentUser._id%>">Overview</a><i class="ion-ios-person-outline option-icon"></i></li>
+            <li><a href="/profile/<%=currentUser._id%>/edit">Personal Info</a><i class="ion-clipboard option-icon"></i></li>
+            <li class="option-selected"><a href="/profile/<%=currentUser._id%>/edit/profile_picture">Profile Picutre</a><i class="ion-image option-icon"></i></li>
+            <li><a href="/profile/<%=currentUser._id%>/edit/profile_hobbies">Hobbies</a><i class="ion-ios-game-controller-a-outline option-icon"></i></li>
+        </ul>
+    </div>
+
+    <div class="profile-panel">
+    
+        <h2>Add a new Hobby!</h2>
+        <form id="edit-profile-form" action="/profile/<%=currentUser._id%>/edit/profile_hobbies" method="POST">
+            <div class="field-container">
+                <label>Title:</label>
+                <input type="text" placeholder="Title" name="hobby[title]">
+            </div>
+            <div class="field-container">
+                <label>Description:</label>
+                <input type="textbox" placeholder="Description" name="hobby[desc]">
+            </div>
+            <div>
+                <button class="btn-submit">Submit!</button>
+            </div>
+        </form>
+        
+
+        <div class="row">
+            <div class="disclaimer">
+                <h2>Please do not use any personal or sensitive information and this site is for demonstration purposes only. It is strongly recommended that you use plfaceholder information to save to the site. Thanks!</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include("../../partials/footer") %>

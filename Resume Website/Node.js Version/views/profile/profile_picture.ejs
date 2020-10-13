@@ -1,0 +1,38 @@
+<%- include("../partials/header") %>
+
+<div class="profile-panel-container">
+    <div class="profile-options-bar">
+        <ul>
+            <li><a href="/profile/<%=foundUser.id%>">Overview</a><i class="ion-ios-person-outline option-icon"></i></li>
+            <li><a href="/profile/<%=foundUser.id%>/edit">Personal Info</a><i class="ion-clipboard option-icon"></i></li>
+            <li class="option-selected"><a href="/profile/<%=foundUser.id%>/edit/profile_picture">Profile Picutre</a><i class="ion-image option-icon"></i></li>
+            <li><a href="/profile/<%=foundUser.id%>/edit/profile_hobbies">Hobbies</a><i class="ion-ios-game-controller-a-outline option-icon"></i></li>
+        </ul>
+    </div>
+
+    <div class="profile-panel">
+        <div class="row">
+            <h1>Out with the old you and in with the new you!</h1>
+        </div>
+        <div class="row">
+            <img class="profile-picture-large" src="/imgs/Photo.jpg">
+        </div>
+
+        <div class="row">
+            <form action="/profile/<%=foundUser.id%>/edit/profile_picture" method="POST" enctype="multipart/form-data">
+                <label>Select an image to upload</label>
+                <input type="file" id="image" name="uploadedImage" value="" required>
+                <button class="submit">Change it up!    </button>
+            </form>
+        </div>
+
+        <div class="row">
+            <div class="disclaimer">
+                <h2>Please do not use any personal or sensitive information and this site is for demonstration purposes only. It is strongly recommended that you use plfaceholder information to save to the site. Thanks!</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include("../partials/footer") %>

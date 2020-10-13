@@ -12,9 +12,10 @@ const express           = require('express'),
       User              = require('./models/user');
 
 // Require page routes
-const indexRoute = require('./routes/index'),
-      profileRoute = require('./routes/profile'),
-      resumeRoute = require('./routes/resume');
+const indexRoute        = require('./routes/index'),
+      profileRoute      = require('./routes/profile'),
+      resumeRoute       = require('./routes/resume'),
+      hobbiesRoute      = require('./routes/hobbies');
     
 
 require('jquery');
@@ -27,6 +28,11 @@ app.use(cookieParser());
 //Connect to MongoDB to the Resume_website_Users table.
 mongoose.set('useFindAndModify', false);
 mongoose.connect("mongodb://localhost/Resume_Website", {useNewUrlParser: true, useUnifiedTopology: true});
+
+mongoose.connection.on('connected', () => {
+        console.log("connected to database...");
+        
+})
 
 //set view engine to ejs.
 app.set("view engine", "ejs");
@@ -50,22 +56,27 @@ app.use(flash());
 app.use(session({
     secret: "This is only a temp password",
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
     cookie: { 
-        maxAge: 60000
+        maxAge: 1*60*60*1000
     },
-    name: "id",
+    name: 'id',
     store: new MongoStore({
         mongooseConnection: mongoose.connection
     })
 }));
 
+//Initalize Passport
 app.use(passport.initialize());
 app.use(passport.session());
+
+//Setup LocalStrategy and serialize/deserializeation
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+
+//Setup res.locals
 app.use(function(req,res,next){
     res.locals.currentUser = req.user;
     res.locals.error = req.flash("error");
@@ -73,11 +84,14 @@ app.use(function(req,res,next){
     next();
 });
 
+//Setup Routes
 app.use("/", indexRoute);
 app.use("/resume", resumeRoute);
 app.use("/profile", profileRoute);
+app.use("/profile/:id/edit/profile_hobbies", hobbiesRoute);
 
 
+//Log once server has started
 app.listen(port, () => {
     console.log("The server has started!");
-})
+});

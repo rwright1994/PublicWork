@@ -1,0 +1,34 @@
+<%- include("../../partials/header") %>
+
+<div class="profile-panel-container">
+    <div class="profile-options-bar">
+        <ul>
+            <li><a href="/profile/<%=currentUser._id%>">Overview</a><i class="ion-ios-person-outline option-icon"></i></li>
+            <li><a href="/profile/<%=currentUser._id%>/edit">Personal Info</a><i class="ion-clipboard option-icon"></i></li>
+            <li class="option-selected"><a href="/profile/<%=currentUser._id%>/edit/profile_picture">Profile Picutre</a><i class="ion-image option-icon"></i></li>
+            <li><a href="/profile/<%=currentUser._id%>/edit/profile_hobbies">Hobbies</a><i class="ion-ios-game-controller-a-outline option-icon"></i></li>
+        </ul>
+    </div>
+
+    <div class="profile-panel">
+   
+        <% if(!foundUser.hobbies || foundUser.hobbies.length == 0){ %>
+            <div class="row">
+                <h2>You currently haven't added any hobbies to your profile!</h2>
+            </div>
+            <div class="row">
+                <a href="/profile/<%=currentUser._id.id%>/edit/profile_hobbies/new" class="btn-confirm">New Hobby</a>
+            </div>
+        <% } %>
+
+        <div class="row">
+            <div class="disclaimer">
+                <h2>Please do not use any personal or sensitive information and this site is for demonstration purposes only. It is strongly recommended that you use plfaceholder information to save to the site. Thanks!</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<%- include("../../partials/footer") %>

@@ -43,7 +43,7 @@ nav{
 
 section{
     background-color: rgb(240, 240, 240);
-    padding: 80px 0;
+    padding: 80px 5%;
     text-align: center;
 }
 
@@ -112,6 +112,11 @@ img{
     flex-direction: column;
     width:20%;
     margin: 1.2% 1.6% 1.2% 1.6%;
+}
+
+.banner-stripe .row{
+    width:75%;
+    margin: 0 auto;
 }
 
 .banner-stripe{
@@ -510,6 +515,17 @@ input{
     color:black;
 }
 
+.btn-confirm{
+    display:inline-block;
+    border-radius: 6px;
+    margin: 16px 0px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(51, 212, 78);
+    
+    
+}
+
 /*------------------------------------------------*/
 /*                   FOOTER                       */
 /*------------------------------------------------*/
@@ -830,7 +846,7 @@ p i::before {
     width:100%;
     display:flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     margin: 24px 24px;
 }
 
@@ -874,9 +890,16 @@ span p{
 }
 
 
+#delete-form{
+    display:flex;
+    width:100%;
+    flex-direction: column  ;
+}
+
 #delete-label{
     margin-top: 32px;
     text-align:center;
+    width:65%;
 }
 
 .profile-panel form{
@@ -897,6 +920,7 @@ span p{
 .profile-panel form button{
     text-align: center;
     margin: 0 auto;
+    width:65%;
 }
 
 #edit-profile-form div:last-child{
@@ -925,30 +949,31 @@ span p{
     background-color:#2a698b;
 }
 
+
 .delete-btn{
     font-size:100%;
     border:none;
+    border-radius: 4px;
     outline:none;
     padding: 4px;
     margin: 12px 0px;
     box-shadow: 0 4px 3px -3px rgb(0, 0, 0);
-    background-color:rgba(173, 240, 143, 0.829);
+    background-color: rgb(240, 38, 38);
 }
 
 .delete-btn:hover{
-    background-color:rgba(123, 218, 79, 0.8);
+    background-color:rgba(199, 32, 32);
 }
 
 .delete-btn:active{
-    background-color:rgba(60, 141, 23, 0.8);
-    border:none;
-    color:red;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
 /*------------------------------------------------*/
 /************ DISCLAIMER **************************/
 /*------------------------------------------------*/
 .disclaimer{
+    width:60%;
     font-style: italic;
     margin-top:60px;
     padding:4px;
@@ -960,6 +985,3 @@ span p{
     flex: 1 0 auto;
 }
 
-.push-bottom{
-    margin-top:auto;
-}
