@@ -1,7 +1,8 @@
 const mongoose              = require('mongoose');
 const passportLocalMongoose = require('passport-local-mongoose');
 
-const userSchema = mongoose.Schema({
+
+const userSchema = new mongoose.Schema({
     username: {
         type:String,
         required: true,
@@ -15,7 +16,7 @@ const userSchema = mongoose.Schema({
     hobbies: [
         {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "hobbies"
+            ref: "Hobby"
         }
     ]
 });

@@ -4,7 +4,7 @@ const imageSchema = new mongoose.Schema({
     user:{
         id:{
             type: mongoose.Schema.Types.ObjectId,
-            ref: "user"
+            ref: "User"
         }
     },
     img:{

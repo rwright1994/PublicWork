@@ -1,26 +1,12 @@
 const express                = require('express'),
       router                 = express.Router(),
-      middleware             = require('../middleware/index'),
-      multer                 = require('multer'),
-      gridfs                 = require('mongoose-gridfs'),
       User                   = require('../models/user');
 
 
 
 
-      //set up Multer disk storage
-const storage = multer.diskStorage({
-    destination: function(req, file,cb){
-        cb(null, '/temp/my-uploads')
-    },
-    filename: function(req,file,cb){
-        cb(null, file.fieldname + '-' + Date.now())
-    }
-})
 
-var upload = multer({storage: storage})
-
-
+      
 //----------------------- Routes ---------------------------//
 
 //RESTFUL Route - SHOW (Profile) - Render user's profile page

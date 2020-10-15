@@ -1,4 +1,4 @@
-<%- include("../../partials/header") %>
+<%- include("../partials/header") %>
 
 <div class="profile-panel-container">
     <div class="profile-options-bar">
@@ -11,15 +11,22 @@
     </div>
 
     <div class="profile-panel">
-   
-        <% if(!foundUser.hobbies || foundUser.hobbies.length == 0){ %>
-            <div class="row">
-                <h2>You currently haven't added any hobbies to your profile!</h2>
+    
+        <h2>Add a new Hobby!</h2>
+        <form id="edit-profile-form" action="/profile/<%=currentUser._id%>/edit/profile_hobbies" method="POST">
+            <div class="field-container">
+                <label>Title:</label>
+                <input type="text" placeholder="Title" name="hobby[title]">
             </div>
-            <div class="row">
-                <a href="/profile/<%=currentUser._id.id%>/edit/profile_hobbies/new" class="btn-confirm">New Hobby</a>
+            <div class="field-container">
+                <label>Description:</label>
+                <input type="textbox" placeholder="Description" name="hobby[desc]">
             </div>
-        <% } %>
+            <div>
+                <button class="btn-submit">Submit!</button>
+            </div>
+        </form>
+        
 
         <div class="row">
             <div class="disclaimer">
@@ -30,5 +37,4 @@
 </div>
 
 
-
-<%- include("../../partials/footer") %>
+<%- include("../partials/footer") %>

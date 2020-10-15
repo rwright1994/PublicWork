@@ -1,14 +1,15 @@
 const mongoose = require('mongoose');
 
 const hobbySchema = new mongoose.Schema({
+    title: String,
     user: {
         id: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'users'
+            ref: "User"
             },
         username: String
     },
-    title: String,
+  
     desc: String,
     iconURL: String
     
