@@ -15,6 +15,7 @@ const express           = require('express'),
 const indexRoute        = require('./routes/index'),
       profileRoute      = require('./routes/profile'),
       resumeRoute       = require('./routes/resume'),
+      templatesRoute    = require('./routes/templates'),
       hobbiesRoute      = require('./routes/hobbies');
     
 
@@ -88,6 +89,7 @@ app.use(function(req,res,next){
 app.use("/", indexRoute);
 app.use("/resume", resumeRoute);
 app.use("/profile", profileRoute);
+app.use("/templates", templatesRoute)
 app.use("/profile/:id/edit/profile_hobbies", hobbiesRoute);
 
 

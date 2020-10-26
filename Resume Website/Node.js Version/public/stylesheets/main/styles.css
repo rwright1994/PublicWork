@@ -53,13 +53,6 @@ img{
     margin: 0 auto;
 }
 
-.time-stamp{
-    text-align:left;
-    font-weight: 500;
-    margin-left: 8px;
-}
-
-
 .row{
     display:flex;
     justify-content: center;
@@ -72,22 +65,21 @@ img{
     clear:both;
 }
 
-/* Creates a col to take 50% of parent container(includes margins) */
+.col-75, .col-50, .col-50-left,
+.col-33, .col-25{
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: top;
+}
 
 .col-75{
-    text-align:center;
-    display:inline-flex;
-    flex-direction: column;
     width:70%;
     margin: 1.2% 1.6% 1.2% 1.6%;
 }
 
 .col-50,
 .col-50-left{
-    text-align:center;
-    vertical-align: top;
-    display:inline-flex;
-    flex-direction: column;
     width:45%;
     margin: 1.2% 1.6% 1.2% 1.6%;
 }
@@ -96,20 +88,12 @@ img{
     text-align: left;
 }
 
-
 .col-33{
-    text-align:center;
-    vertical-align: top;
-    display:inline-flex;
-    flex-direction: column;
     width:28%;
     margin: 1.2% 1.6% 1.2% 1.6%;
 }
 
 .col-25{
-    text-align:center;
-    display:inline-flex;
-    flex-direction: column;
     width:20%;
     margin: 1.2% 1.6% 1.2% 1.6%;
 }
@@ -207,19 +191,11 @@ header{
 /*                    NAVBAR                      */
 /*------------------------------------------------*/
 .navbar{
-    display:inline-block;
     float: right;
     color:grey;
     font-weight: 400;
 }
 
-.navbar li a:link,
-.navbar li a:visited{
-    color:white;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: color 0.5s, border 0.5s;
-}
 
 .navbar ul{
     list-style: none;
@@ -237,12 +213,19 @@ header{
     margin-right:48px;
 }
 
+.navbar li a:link,
+.navbar li a:visited{
+    color:white;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.5s, border 0.5s;
+}
+
 .navbar li a:hover,
 .navbar li a:active{
     color:rgb(219, 229, 25);  
     border-bottom: 2px solid rgb(219, 229, 25);
 }
-
 
 .fixed-mob-nav{
     display:none;
@@ -253,7 +236,6 @@ header{
     width:0;
     height:100%;
 }
-
 
 .fixed-mob-nav ul li{
     display:inline-block;
@@ -517,13 +499,18 @@ input{
 
 .btn-confirm{
     display:inline-block;
+    text-decoration: none;
+    color:white;
     border-radius: 6px;
     margin: 16px 0px;
     padding: 10px;
     text-align: center;
-    background-color: rgb(51, 212, 78);
-    
-    
+    background-color: rgb(107, 199, 76);
+    transition: background-color 0.4s linear;
+}
+
+.btn-confirm:hover{
+    background-color: rgb(93, 175, 65);
 }
 
 /*------------------------------------------------*/
@@ -653,6 +640,13 @@ footer{
     
 }
 
+.time-stamp{
+    text-align:left;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+
 .resume-container h3,
 .resume-container h5{
     text-align: left;
@@ -767,15 +761,69 @@ p i{
 p i::before {
    width: 15px;
 }
+/*------------------------------------------------*/
+/*          TEMPLATES SECTION                     */
+/*------------------------------------------------*/
+.template-link{
+    text-decoration: none;
+    color:black;
+}
+
+.template-link:active,
+.template-link.visited{
+    text-decoration: none;
+    color: black;
+}
+
+
+.template-container{
+    border: 1px solid gainsboro;
+    margin-top:32px;
+    border-radius: 0px 0px 6px 6px;
+    transition: all 0.1s linear;
+}
+
+.template-container:hover{
+    -webkit-animation: pulsate 1s infinite alternate;
+    -moz-animation: pulsate 1s infinite alternate;
+    -animation: pulsate 1s infinite alternate;
+    cursor: pointer;
+}
+
+.template-title{
+    font-size:120%;
+    padding-top: 16px;
+}
+
+.template-img{
+    padding: 0px;
+    margin: 0px;
+}
+
+.template-desc{
+    font-size:110%;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    padding: 14px 24px;
+    margin: 0px auto;
+    text-align:center;
+    width:100%;
+}
+
+@keyframes pulsate {
+    from { box-shadow: 0 0 10px #333; }
+    to { box-shadow: 0 0 20px #c00; }
+    }
 
 /*------------------------------------------------*/
-/*           PROFILE SECTION         */
+/*           PROFILE SECTION                      */
 /*------------------------------------------------*/
 
 .profile-panel-container{
     display:flex;
     height:100%;
 }
+
 
 .profile-options-bar{
     margin:0;
@@ -850,6 +898,11 @@ p i::before {
     margin: 24px 24px;
 }
 
+.profile-panel h2{
+    margin-left: 36px;
+    padding: 16px 0px;
+}
+
 .profile-panel p{
     text-align:left;
 }
@@ -868,7 +921,7 @@ p i::before {
     margin: 4px 0 4px 4px; 
     padding:4px; 
     border-radius:4px 0 0 4px; 
-   
+    box-shadow: 2px 4px 3px 0px #d8d8d8;;
     width:25%;
 }
 
@@ -975,7 +1028,9 @@ span p{
 }
 
 .profile-panel .hobby-info{
-    text-align:left    
+    text-align:left;
+    padding: 0px 6px ;
+    padding-bottom: 12px;
 }
 
 #delete-icon-btn{

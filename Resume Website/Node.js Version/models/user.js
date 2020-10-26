@@ -1,5 +1,7 @@
 const mongoose              = require('mongoose');
 const passportLocalMongoose = require('passport-local-mongoose');
+const Hobby                 = require('../models/hobby');
+
 
 
 const userSchema = new mongoose.Schema({
@@ -20,6 +22,15 @@ const userSchema = new mongoose.Schema({
         }
     ]
 });
+
+userSchema.pre('remove',function(next){
+    
+    console.log("this is from the pre of UserSchema");
+    console.log(this);
+    Hobby.remove({_id: this.user._id}).exec();
+    return next();
+})
+
 
 userSchema.plugin(passportLocalMongoose);
 

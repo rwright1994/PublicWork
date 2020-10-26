@@ -12,8 +12,6 @@ router.get("/", (req,res) => {
         if(err || !foundUser){
             req.flash("error", "User not found.");
         }else{
-            console.log('---foundUser---')
-            console.log(foundUser);
             res.render('hobbies/index', {
                 foundUser:foundUser,
             
@@ -68,7 +66,8 @@ router.post("/", async (req,res) => {
 // Route path that contains more than one id must be named differently otherwise
 // the last :id_name will take presedence.
 router.delete("/:hobby_id", async (req ,res) => {
-    await Hobby.findOneAndRemove(req.params.hobby_id, (err) => {
+
+    await Hobby.findByIdAndRemove(req.params.hobby_id, (err) => {
         if(err){
             console.log("db entry not found!");
             res.redirect("/profile/hobbies/index");
@@ -76,7 +75,9 @@ router.delete("/:hobby_id", async (req ,res) => {
            
             res.redirect("/profile/" + req.params.id + "/edit/profile_hobbies/");
         }
-    })
+    });
+
+    
 })
 
 module.exports = router

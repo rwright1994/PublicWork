@@ -20,10 +20,15 @@
         </div>
 
         <div class="profile-panel">
-            <h1>Welcome <%=currentUser.username%>!</h1>
+            <h1 >Welcome <%=currentUser.username%>!</h1>
             
             <div class="row">
                 <a href="/profile/<%=foundUser.id%>/edit/profile_picture"><img class="profile-picture-large" src="/imgs/Photo.jpg"></a>
+            </div>
+
+
+            <div class="row" style="justify-content:left;">
+                <h2>Personal Information</h2>
             </div>
 
             <div class="row">
@@ -62,20 +67,49 @@
                     <% } %>
                 </div>
             </div>
+            
+        
+            <% if(!foundUser.hobbies || foundUser.hobbies.length == 0){ %>
+                <div class="row">
+                    <h2>Hobbies</h2>
+                </div>
+                <div class="row">
+                    <p>You haven't added any hobbies yet. Tell us what you like doing!</p>
+                </div>
+            <% }else{  %>
+                <div class="row" style="justify-content: left;">
+                   <h2>Hobbies</h2>
+                </div>
+                <%  foundUser.hobbies.forEach( function (hobby, index){ %>
+                    <div class="row">
+                            <form action="/profile/<%=foundUser._id%>/edit/profile_hobbies/<%=hobby._id%>?_method=DELETE" method="POST">
+                                <div class="hobby-container">
+                                    <div class="hobby-label">
+                                        <button class="hobby-delete-btn" type="submit"><i  class="ion-close-round"></i></button>
+                                        <p class="hobby-type"><%= hobby.title %></p>
+                                    </div>
+                                    <div>
+                                        <p class="hobby-info"> <%= hobby.desc %></p>
+                                    </div>
+                                </div>
+                            </form>
+                    </div>
+                
+                <% }) %>
+                <% } %>
+
             <div class="row push-bottom">
 
-                    <form action="/profile/delete/<%=foundUser.id%>?_method=DELETE" method="POST">
-                        <div class="row">
-                            <label id="delete-label">Delete Profile?</label>
-                        </div>
-                        <div class="row">
-                            <button class="delete-btn">Delete</button>
-                        </div>
-                    </form>
-
+                <form action="/profile/delete/<%=foundUser.id%>?_method=DELETE" method="POST">
+                    <div class="row">
+                        <label id="delete-label">Delete Profile?</label>
+                    </div>
+                    <div class="row">
+                        <button class="delete-btn">Delete</button>
+                    </div>
+                </form>
             </div>
-        
-    
+
             <div class="row">
                 <div class="disclaimer">
                     <h2>Please do not use any personal or sensitive information and this site is for demonstration purposes only. It is strongly recommended that you use plfaceholder information to save to the site. Thanks!</h2>

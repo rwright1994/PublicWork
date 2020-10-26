@@ -1,7 +1,8 @@
+
 const express                = require('express'),
       router                 = express.Router(),
-      User                   = require('../models/user');
-
+      User                   = require('../models/user'),
+      Hobby                  = require('../models/hobby');
 
 
 
@@ -12,8 +13,9 @@ const express                = require('express'),
 //RESTFUL Route - SHOW (Profile) - Render user's profile page
 router.get("/:id", (req,res) => {
     //query database for user information
-    User.findById(req.params.id).populate("user").exec( (err, foundUser) => {
+    User.findById(req.params.id).populate("hobbies").exec( (err, foundUser) => {
         //If there is an error or no user is found log error message.
+        console.log(foundUser);
         if(err || !foundUser){
             req.flash("error", "User not found.");
             return res.redirect("back");
@@ -87,11 +89,13 @@ router.put("/:id", async (req, res) => {
 
  //RESTFUL Route - DELETE (Profile) - send delete request with the current users id to remove from db.
  //async/await necessary as we need the information to deleted before working with it.
+
  router.delete('/delete/:id', async (req,res) => {
-    await User.findOneAndDelete(req.params.id, (err) => {
+    await User.findById(req.params.id, (err, foundUser) => {
         if(err){
             console.log(err);
         }else{
+            foundUser.remove({_id:req.params.id});
             res.redirect("/logout"); 
         }
     })

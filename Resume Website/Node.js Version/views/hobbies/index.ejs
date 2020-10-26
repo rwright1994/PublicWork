@@ -19,9 +19,7 @@
      
             <% }else { %>
                
-              <%  foundUser.hobbies.forEach( function (hobby, index){ %>
-                
-               
+                <%  foundUser.hobbies.forEach( function (hobby, index){ %>
                     <div class="row">
                         
                             <form action="/profile/<%=foundUser._id%>/edit/profile_hobbies/<%=hobby._id%>?_method=DELETE" method="POST">
@@ -35,11 +33,10 @@
                                     </div>
                                 </div>
                             </form>
-                        
                     </div>
                 
-                <% })%>
-                <%}%>
+                <% }) %>
+            <% } %>
         <div class="row">
             <a href="/profile/<%=currentUser._id%>/edit/profile_hobbies/new" class="btn-confirm">New Hobby</a>
         </div>
