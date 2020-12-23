@@ -4,6 +4,7 @@
   "description": "This is a node.js version of my resume website.",
   "main": "app.js",
   "scripts": {
+    "start": "node server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Robert S Wright",
