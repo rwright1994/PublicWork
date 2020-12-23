@@ -21,7 +21,7 @@ const indexRoute        = require('./routes/index'),
 
 require('jquery');
 
-const port = 3000;
+const port = 3005;
 
 //Setup cookieParser
 app.use(cookieParser());
