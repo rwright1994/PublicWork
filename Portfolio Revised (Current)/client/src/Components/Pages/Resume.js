@@ -105,7 +105,7 @@ const Resume = (props) => {
                     <ResumeHeading heading="Contact Info"/>
                             <Contact 
                                 desc="E-mail"
-                                link="robertstephenwright94@gmail.com"
+                                link="example4@gmail.com"
                                 icon={<IoIosMail color="darkblue" size={24}/>}/>
 
                             <Contact 
