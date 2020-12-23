@@ -1,0 +1,41 @@
+.resumeMain{
+    display: flex;
+    margin: 80px auto;
+    max-width: 1140px;
+    justify-content: center;
+    border-radius: 15px 15px 0 0;
+    box-shadow: -1px 5px 6px 2px rgba(194,194,194,1);
+    width:100%;
+  
+}
+
+.resumeContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px 15px 0 0;
+    width:100%;
+}
+
+.resumeContainer h1 h2 h3{
+    letter-spacing: 2px;
+}
+
+.resumeContainer li{
+    font-size: 90%;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    line-height: 1.5em;
+    font-weight: 300;
+    margin-left: 20px;
+    padding: 4px 0;
+}
+
+
+
+.contactContent{
+    max-width: 75%;
+    
+}
+
+

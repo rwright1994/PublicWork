@@ -1,0 +1,15 @@
+.resumeActionLink{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin:0 auto;
+    width:75%;
+    padding: 75px 0;
+}
+
+.centered{
+    display:flex;
+    justify-content: center;
+}
+

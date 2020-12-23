@@ -1,0 +1,65 @@
+.item{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:20%;
+    padding: 16px 0;
+}
+
+.image{
+    width:200px;
+    height:200px;    
+}
+
+.heading{
+    font-weight:300;
+}
+
+.price{
+    font-size:120%;
+}
+
+.addBtn{
+    display:block;
+    width:80%;
+    padding: 8px;
+    margin-top:4px;
+    font-size:120%;
+    border-radius: 14px;
+    background-color: rgb(61, 61, 243);
+    border: 1px solid rgb(64, 64, 255);
+    color:white;
+    cursor: pointer;
+    transition: backgroundColor 0.3s linear;
+}
+
+.addBtn:hover{
+    background: rgb(48, 48, 207);
+}
+
+@media only screen and (max-width:1440px){
+    .item{
+        width:25%;
+    }
+}
+
+@media only screen and (max-width:1024px){
+    .item{
+        width:30%;
+    }
+
+}
+
+@media only screen and (max-width:768px){
+
+    .item{
+        width:35%;
+        
+    }
+}
+
+@media only screen and (max-width:425px){
+    .item{
+        width:100%;
+    }
+}

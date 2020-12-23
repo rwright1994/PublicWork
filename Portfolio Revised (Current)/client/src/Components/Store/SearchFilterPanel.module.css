@@ -1,0 +1,27 @@
+.searchFilterPanel{
+    display:flex;
+    flex-direction: column;
+    width:20%;
+    padding: 16px 0;
+}
+
+.productFilterList{
+    list-style: none;
+    padding-top:8px;
+}
+
+.productCheckBox{
+    margin-right: 8px;
+}
+
+.productFilter{
+    text-align: left;
+    padding-top: 4px;
+    padding-left:16px;
+}
+
+@media only screen and (max-width: 425px){
+    .searchFilterPanel{
+        width:30%;
+    }
+}

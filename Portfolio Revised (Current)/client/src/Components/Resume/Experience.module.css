@@ -1,0 +1,26 @@
+.contentContainer{
+    display:flex;
+    width:100%;
+    margin:1% 1.6% 1% 1.6%;
+    padding: 16px 0;
+}
+
+.timeStamp{
+    width:25%;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+.content{
+    width:70%;
+}
+
+.content h3{
+    font-weight:500;
+}
+
+.content h5{
+    font-weight: 400;
+    font-style: italic;
+    padding: 8px 0;
+}

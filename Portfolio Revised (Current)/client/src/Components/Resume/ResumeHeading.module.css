@@ -1,0 +1,9 @@
+.resumeHeading{
+    text-align: left;
+    margin-left: 24px;
+    margin-right: 24px;
+    border-bottom: 1px solid rgba(192, 192, 192, 0.849);
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    color: darkblue;
+}

@@ -1,0 +1,24 @@
+.socialContainer{
+    display:flex;
+    align-items: center;
+    margin: 16px;
+}
+
+.socialName{
+    padding: 0 8px;
+    transition: color 0.3s linear;
+}
+
+.socialIcon{
+    padding: 8px;
+    transition: all 0.15s linear;
+}
+
+.socialIcon:hover{
+    opacity: .75;
+}
+
+
+
+
+

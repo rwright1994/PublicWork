@@ -1,0 +1,21 @@
+.contentContainer{
+    display:flex;
+    width:100%;
+    margin:1% 1.6% 1% 1.6%;
+    padding: 16px 0;
+}
+
+.content{
+    width:70%;
+}
+.certImg{
+    width:25%;
+}
+
+img#certImg{
+    width:100px;
+    height:100px;
+    margin: 0 25%;
+    border: 2px solid black;
+    border-radius: 50%
+}

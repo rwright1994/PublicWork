@@ -1,0 +1,28 @@
+.quickLinksContainer{
+    display:flex;
+    justify-content: center;
+}
+
+.quickLink{
+    display:inline-block;
+    padding: 8px 16px;
+    transition: color 0.3s linear;
+}
+
+.quickLink:hover{
+    color:blue;
+  
+}
+
+.quickLink::after{
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: blue;
+    transition: 300ms;
+}
+
+.quickLink:hover::after {
+    width: 100%;
+  }
